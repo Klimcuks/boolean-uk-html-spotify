@@ -210,6 +210,10 @@ hr {
 
 /* MAIN */
 
+.main, aside {
+  margin-bottom: -20px;
+}
+
 .main-header {
     background-color: #080b12;
 }
