@@ -422,3 +422,22 @@ progress {
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+.imgCont {
+  position: relative;
+}
+
+
+.imgCont .hoverImg {
+  position: absolute;
+  left: 10;
+  top: 0;
+  padding: 20px 0 0 30px;
+  display: none;
+  width: 200px;
+  
+}
+.imgCont:hover .hoverImg {
+  display: block;
+
+}
