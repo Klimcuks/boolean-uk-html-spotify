@@ -423,21 +423,27 @@ progress {
     background: #555;
   }
 
+  /* ON HOVER STYLING*/
+
 .imgCont {
   position: relative;
 }
-
-
 .imgCont .hoverImg {
   position: absolute;
   left: 10;
   top: 0;
   padding: 20px 0 0 30px;
-  display: none;
-  width: 200px;
-  
+  width: 100px;
+  opacity: 0;
+  transition: 0.7s;
+}
+.imgCont:hover .imgMain {
+  opacity: 0.3;
+  transition: 0.5s;
 }
 .imgCont:hover .hoverImg {
   display: block;
+  opacity: 1;
+  justify-self: center;
 
 }
