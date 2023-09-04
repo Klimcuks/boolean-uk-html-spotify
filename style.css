@@ -39,6 +39,9 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
   }
+  .categories {
+    flex-wrap: wrap;
+  }
 
 
   /* SIDEBAR */
@@ -228,11 +231,21 @@ hr {
     justify-content: center;
     color: #868686;
     margin-top: 1rem;
+    padding-bottom: 40px;
 }
 
-.categories p {
-    margin: 1.2rem;
+.main-content .categories p {
+    margin: 1.2rem 1.2rem 0 1.2rem;
     font-size: medium;
+}
+.main-content .categories p:hover{
+  color: white;
+  cursor: pointer;
+  /* padding-bottom: 2px; */
+  /* margin-top: 10px; */
+  /* border-width: 150px; */
+  border-bottom: 2px solid lightgreen;
+  transition: 0.1s;
 }
 
 .content-type {
