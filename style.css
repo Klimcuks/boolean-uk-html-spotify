@@ -62,7 +62,22 @@
     display: grid;
     grid-template-columns: 2.5rem 1fr;
   }
+  .sidebar-download-app-cont p:hover , img:hover, .sidebar-download-app-cont span:hover, .now-playing-title-artist span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+  }
 
+  .sidebar-main-content-grid .sidebar-nav .sidebar-nav-icon:hover,
+  .sidebar-playlist-item:hover, .add-symbol:hover,
+   .sidebar-playlist:hover span {
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    fill: white;
+    transition: 0.3s;
+  }
 
  /* MEDIA QUERIES */
 
@@ -161,6 +176,7 @@ hr {
 
 .sidebar-playlist p {
     margin-bottom: 1rem;
+    color: white;
 }
 .sidebar-nav {
     fill: #b3b3b3;
@@ -170,6 +186,7 @@ hr {
  .sidebar-download-app-cont {
     justify-self: left;
     display: inline;
+    color: white;
 }
 
 .sidebar-download-app-cont svg {
@@ -177,6 +194,7 @@ hr {
     display: inline;
     margin-left: 0.5rem;
     padding-top: 0.4rem;
+    fill: white;
 }
 
 .sidebar-download-app-cont span {
@@ -275,9 +293,13 @@ hr {
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-top: 2rem;
-    margin-right: 1.2rem;
+    margin: 2rem 1.2rem 0 auto;
+}
+
+.main-header .button-upgrade:hover{
+  font-weight:bold;
+  color: #a3a3a3;
+  border: 3px solid #a3a3a3;
 }
 
 .content .tracks-cont-items-cont {
@@ -416,6 +438,15 @@ progress {
 
 .footer-options img {
     padding-top: 0.7rem;
+}
+
+footer img {
+  filter: brightness(50%);
+}
+
+footer img:hover{
+  fill:white;
+  filter: brightness(100%);
 }
 
   /* SCROLLBAR STYLING */
