@@ -1,97 +1,100 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 
-  .text, .subtitle {
-    display: inline;
-  }
-  
-  .app-main-container {
-    min-height: 100vh;
-    width: 100vw;
+.text,
+.subtitle {
+  display: inline;
+}
+
+.app-main-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: calc(100vh - 80px) 80px;
+}
+
+.sidebar-main-content-grid {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+}
+
+.sidebar-main-content-grid .main {
+  display: grid;
+  grid-template-rows: 7rem 1fr;
+  overflow: hidden;
+}
+
+.main .main-content {
+  display: grid;
+  grid-template-rows: 6rem auto;
+}
+
+.main-content .main-content-main {
+  height: 80vh;
+  display: grid;
+  grid-auto-flow: row;
+  overflow-y: scroll;
+}
+
+
+/* SIDEBAR */
+
+.sidebar-main-content-grid aside {
+  color: #b3b3b3;
+  background-color: #000000;
+  display: grid;
+  grid-template-rows: 4rem 2rem auto 5rem auto 1fr 4rem 6rem;
+}
+
+aside .sidebar-playlist-items-cont {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.sidebar-nav-icon {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+}
+.sidebar-download-app-cont p:hover,
+img:hover,
+.sidebar-download-app-cont span:hover,
+.now-playing-title-artist span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.sidebar-main-content-grid .sidebar-nav .sidebar-nav-icon:hover,
+.sidebar-playlist-item:hover,
+.add-symbol:hover,
+.sidebar-playlist:hover span {
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  fill: white;
+  transition: 0.3s;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 640px) {
+  .sidebar-main-content-grid aside {
     display: grid;
-    grid-template-rows: calc(100vh - 80px) 80px;
-  }
-  
-  .sidebar-main-content-grid {
-    display: grid;
-    grid-template-columns: 15rem 1fr;
-  }
-
-  .sidebar-main-content-grid .main{
-    display: grid;
-    grid-template-rows: 7rem 1fr;
-    overflow: hidden;
-  }
-
-  .main .main-content {
-    display: grid;
-    grid-template-rows: 6rem auto;
-  }
-
-  .main-content .main-content-main {
-    height: 80vh;
-    display: grid;
-    grid-auto-flow: row;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-  }
-  .categories {
-    flex-wrap: wrap;
-  }
-
-
-  /* SIDEBAR */
-
-  .sidebar-main-content-grid aside{
-    color: #b3b3b3;
-    background-color: #000000;
-    display: grid;
-    grid-template-rows: 4rem 2rem auto 5rem auto 1fr 4rem 6rem
-  }
-
-  aside .sidebar-playlist-items-cont {
-    display: grid;
-    grid-template-rows: auto;
-  }
-
-  .sidebar-nav-icon {
-    display: grid;
-    grid-template-columns: 2.5rem 1fr;
-  }
-  .sidebar-download-app-cont p:hover , img:hover, .sidebar-download-app-cont span:hover, .now-playing-title-artist span:hover{
-    text-decoration: underline;
-    cursor: pointer;
-    transition: 0.3s;
-    color: white;
-  }
-
-  .sidebar-main-content-grid .sidebar-nav .sidebar-nav-icon:hover,
-  .sidebar-playlist-item:hover, .add-symbol:hover,
-   .sidebar-playlist:hover span {
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-    fill: white;
-    transition: 0.3s;
-  }
-
- /* MEDIA QUERIES */
-
- @media screen and (max-width: 640px) {
-  .sidebar-main-content-grid aside{
-    display: grid;
-    grid-template-rows: 5rem auto auto  1fr 14rem;
+    grid-template-rows: 5rem auto auto 1fr 14rem;
   }
   .sidebar-main-content-grid {
     display: grid;
     grid-template-columns: 5rem 1fr;
   }
 
-  .sidebar-nav-icon, .sidebar-download-app-cont {
+  .sidebar-nav-icon,
+  .sidebar-download-app-cont {
     display: flex;
     justify-content: center;
     margin-bottom: 1.2rem;
@@ -106,7 +109,7 @@
     display: none;
   }
 
-  .sidebar-nav-icon svg{
+  .sidebar-nav-icon svg {
     align-self: center;
   }
 
@@ -115,363 +118,214 @@
     display: block;
     filter: invert(1);
     margin: 1.2rem;
-}
+  }
 
-.sidebar-logo-icon img {
- scale: 1.5;
-}
+  .sidebar-logo-icon img {
+    scale: 1.5;
+  }
 
-.sidebar-nav-icon span {
-  display: none;
-}
-
-.sidebar-playlist, .sidebar-playlist-items-cont, .sidebar-playlist-item {
-  display: none;
-}
-
-.sidebar-download-app-cont span {
-display: none;
-}
-
-.user-account p {
+  .sidebar-nav-icon span {
     display: none;
-}
-hr {
+  }
+
+  .sidebar-playlist,
+  .sidebar-playlist-items-cont,
+  .sidebar-playlist-item {
     display: none;
-}
+  }
 
-}
+  .sidebar-download-app-cont span {
+    display: none;
+  }
 
+  .user-account p {
+    display: none;
+  }
+  hr {
+    display: none;
+  }
+}
 
 .sidebar-nav-icon {
-    height: 3rem;
+  height: 3rem;
 }
 
 .sidebar-playlist-item {
-    height: 2.1rem;
+  height: 2.1rem;
 }
 
 .spotify-logo {
-    width: 80%;
-    margin: 0.7rem;
-    color: white;
+  width: 80%;
+  margin: 0.7rem;
+  color: white;
 }
 
 .sidebar-logo-icon {
-    display: block;
+  display: block;
 }
 
-.sidebar-playlist, .sidebar-playlist-items-cont {
-    margin: 0.5rem;
+.sidebar-playlist,
+.sidebar-playlist-items-cont {
+  margin: 0.5rem;
 }
 
 .sidebar-playlist .add-symbol {
-    color: black;
-    padding: 0.3rem 0.5rem;
-    background-color: #b2b2b2;
-    border-radius: 0.3rem;
-    font-size: large;
-    font-weight: 900;
+  color: black;
+  padding: 0.3rem 0.5rem;
+  background-color: #b2b2b2;
+  border-radius: 0.3rem;
+  font-size: large;
+  font-weight: 900;
 }
 
 .sidebar-playlist p {
-    margin-bottom: 1rem;
-    color: white;
+  margin-bottom: 1rem;
+  color: white;
 }
 .sidebar-nav {
-    fill: #b3b3b3;
-    margin: 0.5rem;
-  }
+  fill: #b3b3b3;
+  margin: 0.5rem;
+}
 
- .sidebar-download-app-cont {
-    justify-self: left;
-    display: inline;
-    color: white;
+.sidebar-download-app-cont {
+  justify-self: left;
+  display: inline;
+  color: white;
 }
 
 .sidebar-download-app-cont svg {
-    fill: #b3b3b3;
-    display: inline;
-    margin-left: 0.5rem;
-    padding-top: 0.4rem;
-    fill: white;
+  fill: #b3b3b3;
+  display: inline;
+  margin-left: 0.5rem;
+  padding-top: 0.4rem;
+  fill: white;
 }
 
 .sidebar-download-app-cont span {
-    padding-left: 0.8rem;
+  padding-left: 0.8rem;
 }
 
 .user-account {
-    display: flex;
-    margin-bottom: 0.5rem;
-    margin-left: 0.7rem;
-    padding-top: 0.5rem;
-    width: 100%;
-    justify-content: left;
-    align-items: center;
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-left: 0.7rem;
+  padding-top: 0.5rem;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
 }
 
 .user-account img {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 hr {
-    width: 13rem;
-    margin: 0.5rem 0 0.5rem 1rem;
-}
-
-.main-content .content {
-    height: auto;
-    margin: 2rem 4rem;
-}
-
-.content .tracks-cont-items-cont {
-    margin-top: 1.2rem;
+  width: 13rem;
+  margin: 0.5rem 0 0.5rem 1rem;
 }
 
 /* MAIN */
 
-.main, aside {
+.main-content .content {
+  height: auto;
+  margin: 2rem 4rem;
+}
+
+.content .tracks-cont-items-cont {
+  margin-top: 1.2rem;
+}
+
+.main,
+aside {
   margin-bottom: -20px;
 }
 
 .main-header {
-    background-color: #080b12;
+  background-color: #080b12;
 }
 
-.main, .categories {
-    display: flex;
-    background-color: #141922;
-    color: white;  
+.main,
+.categories {
+  display: flex;
+  background-color: #141922;
+  color: white;
 }
 
 .main-content .categories {
-    justify-content: center;
-    color: #868686;
-    margin-top: 1rem;
-    padding-bottom: 40px;
+  justify-content: center;
+  color: #868686;
+  margin-top: 1rem;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .main-content .categories p {
-    margin: 1.2rem 1.2rem 0 1.2rem;
-    font-size: medium;
+  margin: 1.2rem 1.2rem 0 1.2rem;
+  font-size: medium;
 }
-.main-content .categories p:hover{
+.main-content .categories p:hover {
   color: white;
   cursor: pointer;
-  /* padding-bottom: 2px; */
-  /* margin-top: 10px; */
-  /* border-width: 150px; */
   border-bottom: 2px solid lightgreen;
   transition: 0.1s;
 }
 
 .content-type {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .text {
-    color: #868686;
+  color: #868686;
 }
 
 .album-name {
-    font-size: larger;
-    font-weight: bold;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .subtitle {
-    color: #868686;
-    font-weight: bold;
+  color: #868686;
+  font-weight: bold;
 }
 
 .main-header .button-upgrade {
-    display: flex;
-    border: 2px white solid;
-    border-radius: 1.3rem;
-    width: 12rem;
-    padding: 0.5rem 30px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 1.2rem 0 auto;
+  display: flex;
+  border: 2px white solid;
+  border-radius: 1.3rem;
+  width: 12rem;
+  padding: 0.5rem 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 1.2rem 0 auto;
 }
 
-.main-header .button-upgrade:hover{
-  font-weight:bold;
+.main-header .button-upgrade:hover {
+  font-weight: bold;
   color: #a3a3a3;
   border: 3px solid #a3a3a3;
 }
 
 .content .tracks-cont-items-cont {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    justify-content: space-between;
-    gap: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-content: space-between;
+  gap: 1.2rem;
 }
 
 .tracks-cont-items-cont .tracks-cont-item {
-    text-align: center;
+  text-align: center;
 }
-
 
 .tracks-cont-item img {
-    max-width: 90%;
-    margin-bottom: 0.7rem;
-
+  max-width: 90%;
+  margin-bottom: 0.7rem;
 }
-
-.artists .tracks-cont-item {
-    margin-bottom: 12rem;
-}
-
-.tracks-cont-item .artist-image {
-    border-radius: 50%;
-}
-
-
- /* FOOTER */
-
- .app-main-container footer {
-    background-color: #282828;
-    position: fixed;
-    bottom: 0px; 
-    width: 100%; 
-    height: 70px;
-
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 200px 1fr 200px
-   }
-
-   footer .footer-now-playing {
-    display: grid;
-    grid-template-columns: 3rem 6rem auto auto;
-    align-self: center;
-
-    margin-left: 1rem;
-    width: 100%;
-   }
-
-   footer .footer-player {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    align-self: center;
-   }
-
-   footer .footer-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 6fr;
-    align-self: center;
-   }
-.app-main-container footer {
-    background-color: #282828;
-    position: fixed;
-    bottom: 0px; 
-    width: 100%; 
-    height: 70px;
-
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 200px 1fr 200px
-   }
-
-   footer .footer-now-playing {
-    display: grid;
-    grid-template-columns: 3rem 6rem auto auto;
-    align-self: center;
-   }
-
-   footer .footer-player {
-    display: grid;
-    grid-template-rows: auto auto;
-    align-self: center;
-    justify-self: center;
-
-   }
-
-   footer .footer-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 6fr;
-    align-self: center;
-   }
-
-.footer-player-bar {
-    display: flex;
-}
-
-.footer-player .footer-player-icons{
-    display: flex;
-    justify-content: center;
-    height: 2rem;
-}
-
-progress {
-    width: 25rem;
-    margin-top: 0.7rem;
-}
-.options-progress {
-    width: 5rem;
-}
-.footer-player-bar span {
-    color: white;
-    padding: 0.7rem 1rem 1rem 1rem;
-}
-.footer-player-icons img {
-    margin-left: 1.4rem;
-    margin-top: 1rem;
-    
-}
-
-.footer-now-playing .now-playing-title-artist {
-    font-size: smaller;
-    color: white;
-    margin: 0.7rem 0;
-    padding: 0.2rem;
-}
-
-.footer-now-playing .now-playing-icons{
-    align-self: center;
-    justify-content: center;
-    margin: 0.8rem 0.5rem;
-    display: flex;
-}
-
-.footer-options img {
-    padding-top: 0.7rem;
-}
-
-footer img {
-  filter: brightness(50%);
-}
-
-footer img:hover{
-  fill:white;
-  filter: brightness(100%);
-}
-
-  /* SCROLLBAR STYLING */
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #00000072;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: rgb(60, 60, 60);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-  /* ON HOVER STYLING*/
 
 .imgCont {
   position: relative;
 }
+
 .imgCont .hoverImg {
   position: absolute;
   left: 10;
@@ -481,13 +335,155 @@ footer img:hover{
   opacity: 0;
   transition: 0.7s;
 }
+
 .imgCont:hover .imgMain {
   opacity: 0.3;
   transition: 0.5s;
 }
+
 .imgCont:hover .hoverImg {
   display: block;
   opacity: 1;
   justify-self: center;
+}
 
+.artists .tracks-cont-item {
+  margin-bottom: 12rem;
+}
+ .artists img  {
+  border-radius: 50%;
+}
+
+/* FOOTER */
+
+.app-main-container footer {
+  background-color: #282828;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+}
+
+footer .footer-now-playing {
+  display: grid;
+  grid-template-columns: 3rem 6rem auto auto;
+  align-self: center;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+footer .footer-player {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-self: center;
+}
+
+footer .footer-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 6fr;
+  align-self: center;
+}
+.app-main-container footer {
+  background-color: #282828;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+}
+
+footer .footer-now-playing {
+  display: grid;
+  grid-template-columns: 3rem 6rem auto auto;
+  align-self: center;
+}
+
+footer .footer-player {
+  display: grid;
+  grid-template-rows: auto auto;
+  align-self: center;
+  justify-self: center;
+}
+
+footer .footer-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 6fr;
+  align-self: center;
+}
+
+.footer-player-bar {
+  display: flex;
+}
+
+.footer-player .footer-player-icons {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+}
+
+progress {
+  width: 25rem;
+  margin-top: 0.7rem;
+}
+.options-progress {
+  width: 5rem;
+}
+.footer-player-bar span {
+  color: white;
+  padding: 0.7rem 1rem 1rem 1rem;
+}
+.footer-player-icons img {
+  margin-left: 1.4rem;
+  margin-top: 1rem;
+}
+
+.footer-now-playing .now-playing-title-artist {
+  font-size: smaller;
+  color: white;
+  margin: 0.7rem 0;
+  padding: 0.2rem;
+}
+
+.footer-now-playing .now-playing-icons {
+  align-self: center;
+  justify-content: center;
+  margin: 0.8rem 0.5rem;
+  display: flex;
+}
+
+.footer-options img {
+  padding-top: 0.7rem;
+}
+
+footer img {
+  filter: brightness(50%);
+}
+
+footer img:hover {
+  fill: white;
+  filter: brightness(100%);
+}
+
+/* SCROLLBAR STYLING */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000072;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(60, 60, 60);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
