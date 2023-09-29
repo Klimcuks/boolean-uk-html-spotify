@@ -301,7 +301,7 @@ aside {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 70px;
+  height: 65px;
   overflow: hidden;
   display: grid;
   grid-template-columns: 200px 1fr 200px;
@@ -318,17 +318,6 @@ footer .footer-options {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 6fr;
   align-self: center;
-}
-.app-main-container footer {
-  background-color: #282828;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  height: 70px;
-
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 200px 1fr 200px;
 }
 
 footer .footer-now-playing {
@@ -486,7 +475,13 @@ footer img:hover {
   hr {
     display: none;
   }
-
+  .main-header{
+    justify-self: center;
+    padding: 0 160px;
+  }
+   p.content-type {
+    margin-left: 80px;
+  }
   
 }
 
@@ -496,5 +491,6 @@ footer img:hover {
   }
   footer .footer-player{
     margin: auto;
+    margin-left:30px;
   }
 }

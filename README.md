@@ -19,4 +19,13 @@ For the player icons, you can use your own images or Font Awesome icons (https:/
 * &#9745; The top navigation list wraps as the page size is reduced.
 * &#9745; On hovering over cover images, a play icon appears overlaid.
 * &#9745; Only the main content area scrolls - it moves behind the upgrade bar and the player controls. The side menu also stays fixed as the main content scrolls.
+
+#### Screenshots of the challenge
+
+Here are some screenshots of the challenge:
+
+![Screenshot 1](./assets/img/Screenshot1.png)
+![Screenshot 2](./assets/img/Screenshot2.png)
+![Screenshot 3](./assets/img/Screenshot3.png)
+
 #### [View the project](https://boolean-uk-html-spotify.vercel.app/)
