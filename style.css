@@ -83,68 +83,8 @@ img:hover,
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 640px) {
-  .sidebar-main-content-grid aside {
-    display: grid;
-    grid-template-rows: 5rem auto auto 1fr 14rem;
-  }
-  .sidebar-main-content-grid {
-    display: grid;
-    grid-template-columns: 5rem 1fr;
-  }
 
-  .sidebar-nav-icon,
-  .sidebar-download-app-cont {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.2rem;
-    scale: 1.2;
-    padding: 0;
-  }
 
-  .sidebar-download-app-cont svg {
-    padding-left: 0.7rem;
-  }
-  .sidebar-logo-area {
-    display: none;
-  }
-
-  .sidebar-nav-icon svg {
-    align-self: center;
-  }
-
-  .sidebar-logo-small {
-    height: 1.2rem;
-    display: block;
-    filter: invert(1);
-    margin: 1.2rem;
-  }
-
-  .sidebar-logo-icon img {
-    scale: 1.5;
-  }
-
-  .sidebar-nav-icon span {
-    display: none;
-  }
-
-  .sidebar-playlist,
-  .sidebar-playlist-items-cont,
-  .sidebar-playlist-item {
-    display: none;
-  }
-
-  .sidebar-download-app-cont span {
-    display: none;
-  }
-
-  .user-account p {
-    display: none;
-  }
-  hr {
-    display: none;
-  }
-}
 
 .sidebar-nav-icon {
   height: 3rem;
@@ -367,13 +307,6 @@ aside {
   grid-template-columns: 200px 1fr 200px;
 }
 
-footer .footer-now-playing {
-  display: grid;
-  grid-template-columns: 3rem 6rem auto auto;
-  align-self: center;
-  margin-left: 1rem;
-  width: 100%;
-}
 
 footer .footer-player {
   display: grid;
@@ -402,6 +335,8 @@ footer .footer-now-playing {
   display: grid;
   grid-template-columns: 3rem 6rem auto auto;
   align-self: center;
+  margin-left: 1rem;
+  width: 100%;
 }
 
 footer .footer-player {
@@ -486,4 +421,80 @@ footer img:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+@media screen and (max-width: 640px) {
+  
+  .sidebar-main-content-grid aside {
+    display: grid;
+    grid-template-rows: 5rem auto auto 1fr 14rem;
+  }
+  .sidebar-main-content-grid {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+  }
+
+  .sidebar-nav-icon,
+  .sidebar-download-app-cont {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    scale: 1.2;
+    padding: 0;
+  }
+
+  .sidebar-download-app-cont svg {
+    padding-left: 0.7rem;
+  }
+  .sidebar-logo-area {
+    display: none;
+  }
+
+  .sidebar-nav-icon svg {
+    align-self: center;
+  }
+
+  .sidebar-logo-small {
+    height: 1.2rem;
+    display: block;
+    filter: invert(1);
+    margin: 1.2rem;
+  }
+
+  .sidebar-logo-icon img {
+    scale: 1.5;
+  }
+
+  .sidebar-nav-icon span {
+    display: none;
+  }
+
+  .sidebar-playlist,
+  .sidebar-playlist-items-cont,
+  .sidebar-playlist-item {
+    display: none;
+  }
+
+  .sidebar-download-app-cont span {
+    display: none;
+  }
+
+  .user-account p {
+    display: none;
+  }
+  hr {
+    display: none;
+  }
+
+  
+}
+
+@media screen and (max-width:860px){
+  footer .footer-now-playing, footer .footer-options{
+    display: none;
+  }
+  footer .footer-player{
+    margin: auto;
+  }
 }
