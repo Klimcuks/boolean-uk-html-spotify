@@ -28,4 +28,4 @@ Here are some screenshots of the completed challenge:
 ![Screenshot 2](./assets/img/Screenshot2.png)
 ![Screenshot 3](./assets/img/Screenshot3.png)
 
-#### [View the project](https://boolean-uk-html-spotify.vercel.app/)
+## [View the project](https://boolean-uk-html-spotify.vercel.app/)
