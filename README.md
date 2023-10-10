@@ -20,9 +20,9 @@ For the player icons, you can use your own images or Font Awesome icons (https:/
 * &#9745; On hovering over cover images, a play icon appears overlaid.
 * &#9745; Only the main content area scrolls - it moves behind the upgrade bar and the player controls. The side menu also stays fixed as the main content scrolls.
 
-#### Screenshots of the challenge
+## Screenshots of the challenge
 
-Here are some screenshots of the challenge:
+Here are some screenshots of the completed challenge:
 
 ![Screenshot 1](./assets/img/Screenshot1.png)
 ![Screenshot 2](./assets/img/Screenshot2.png)
